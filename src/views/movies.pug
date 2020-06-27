@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title #{pageTitle} | #{siteName}
+    body
+        if !year
+          h1 MOVIES!
+        else
+          h1=`Searching by ${year}`
+        ul
+          each item in movies
+            li
+              a(href=`/${item.id}`) #{item.title}

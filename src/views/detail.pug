@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title #{pageTitle} | #{siteName}
+    body
+        h1 #{movie.title}
+        p #{movie.summary}
+        ul
+          each item in movie.genres
+            li #{item}
+        
